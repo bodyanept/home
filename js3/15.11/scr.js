@@ -147,30 +147,30 @@
 
 //task10
 
-
 let n=0
 do{
-    let n=+prompt('загадай от 0 до 100')  
+    n=Math.trunc (+prompt('загадай от 0 до 100'))  
 }while(n<0 || n>100)
-let min=0
-let mdl=0
-let max=100
-let back =''
-while(min <=max){
-    mdl=Math.trunc((min+max)/2)
-    back=prompt(`${mdl}?,если да,пропиши =,если меньше то <,если больше то > `)
-
-    if (back != '='&& back != '<'&& back !='>'){
-        alert('что ты ввел,я не понимаю')
-        continue;
-    }
-    if(
-        (back != '='&& mdl ==n)||
-        (back == '='&& mdl !=n)
-    ){
-        alert('по моему у нас завелся врунишка')
-        continue
-    }
+    let min=0
+    let mdl=0
+    let max=100
+    let back =""
+    while(min <=max){
+        mdl=Math.trunc((min+max)/2)
+        back=prompt(`${mdl}?,если да,пропиши =,если меньше то <,если больше то > `)
+        if (back != '='&& back != '<'&& back !='>'){
+            alert('что ты ввел,я не понимаю');
+            continue;
+        }
+        if(     
+            (back != "="&& mdl ==n)||
+            (back == "="&& mdl !=n)||
+            (back == ">"&& mdl >n)||
+            (back == "<"&& mdl <n)  
+        ){
+            alert('по моему у нас завелся врунишка');
+            continue;
+        }
     if(back=='>'){
         min=mdl+1
     }else if(back=='<'){
@@ -178,6 +178,5 @@ while(min <=max){
     }else{
         min = max+1
     }
-    
 }    
 alert(`ты загадал ${mdl}`)
