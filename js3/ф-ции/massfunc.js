@@ -1,32 +1,31 @@
 // task1
 
-// let car={
-//     proizvoditel:'LADA',
-//     model:2170,
-//     year:2016,
-//     speed:'110',
-// }
+let car={
+    proizvoditel:'LADA',
+    model:2170,
+    year:2016,
+    speed:'110',
+}
 // for(let tempProperty in car){
 //     alert(tempProperty)
 //     alert(car[tempProperty])
 // }
 
-// function rasst(x) {
-//     // let time=(x/car.speed)
-//     let time=Math.trunc(x/car.speed)
-   
-//     if(time%4){
-//         ++time
-//     }
-//     console.log(time);
+function rasst(x) {
+    let time=Math.trunc(x/car.speed)
+    let breakT= time%4
+    if(breakT==0){
+        time++
+    }
+    console.log(time);
     
-//     return (time)
-// }
+    
+}
+
+rasst(440)
 
 
-// alert ('ты доедешь за '+time+tm)
 // alert(rasst(350))
-// rasst(990)
 
 //task2
 
@@ -109,108 +108,108 @@
 
 //task3
 
-let hms={
-    hr:1,
-    min:32,
-    sec:44,
-}
+// let hms={
+//     hr:1,
+//     min:32,
+//     sec:44,
+// }
 
-function showTime() {
-    console.log( ( '0' + hms.hr).slice(-2) 
-        + ":"
-        + ('0' + hms.min).slice(-2)
-        + ":" 
-        + ('0' + hms.sec).slice(-2)
-        );
-}
-function vis(){
-    for(let tempProperty in hms){
-            // alert(tempProperty);
-            // alert(hms[tempProperty]);
-            console.log(tempProperty);
-            console.log(hms[tempProperty]);
-        }
-}
-function changeSec(a){
+// function showTime() {
+//     console.log( ( '0' + hms.hr).slice(-2) 
+//         + ":"
+//         + ('0' + hms.min).slice(-2)
+//         + ":" 
+//         + ('0' + hms.sec).slice(-2)
+//         );
+// }
+// function vis(){
+//     for(let tempProperty in hms){
+//             // alert(tempProperty);
+//             // alert(hms[tempProperty]);
+//             console.log(tempProperty);
+//             console.log(hms[tempProperty]);
+//         }
+// }
+// function changeSec(a){
     
     
-    if (hms.sec+a>59){
-        let plusMin=Math.trunc(a/60);
+//     if (hms.sec+a>59){
+//         let plusMin=Math.trunc(a/60);
         
     
-        if(plusMin==0){
-        changeMin(1);
-        a=(hms.sec +a)-60;
-        hms.sec=0;
-        }else{
-        changeMin(b+plusMin);
-        a=(hms.sec+a)-(plusMin*60);
-        hms.sec=0;
+//         if(plusMin==0){
+//         changeMin(1);
+//         a=(hms.sec +a)-60;
+//         hms.sec=0;
+//         }else{
+//         changeMin(b+plusMin);
+//         a=(hms.sec+a)-(plusMin*60);
+//         hms.sec=0;
         
-    }
+//     }
     
-}   
+// }   
     
-    hms.sec+=a
-    return hms.sec
-}
-function changeMin(b){
-    if (hms.min + b > 59) {
-        let plusH = Math.floor(b / 60);
-        if (plusH == 0) {
-            changeHr(1);
-            b = (hms.min + b) - 60;
-            hms.min = 0;
-        }
-        else{
-            changeHr(plusH);
-            b = (hms.min + b) - (plusH * 60);
-            hms.min = 0;
-        }
-    }
+//     hms.sec+=a
+//     return hms.sec
+// }
+// function changeMin(b){
+//     if (hms.min + b > 59) {
+//         let plusH = Math.floor(b / 60);
+//         if (plusH == 0) {
+//             changeHr(1);
+//             b = (hms.min + b) - 60;
+//             hms.min = 0;
+//         }
+//         else{
+//             changeHr(plusH);
+//             b = (hms.min + b) - (plusH * 60);
+//             hms.min = 0;
+//         }
+//     }
 
-    hms.min += b;
-    return hms.min
-}
-function changeHr(c){
-    if (hms.hr + c > 23) {
-    let plusD = Math.floor(c / 24);
-        if (plusD == 0) {
-            c = (hms.hr + c) - 24;
-            hms.hr = 0;
-        }
-        else{
-            c = (hms.hr + c) - (plusD * 24);
-            hms.hr = 0;
-        }
-    }
+//     hms.min += b;
+//     return hms.min
+// }
+// function changeHr(c){
+//     if (hms.hr + c > 23) {
+//     let plusD = Math.floor(c / 24);
+//         if (plusD == 0) {
+//             c = (hms.hr + c) - 24;
+//             hms.hr = 0;
+//         }
+//         else{
+//             c = (hms.hr + c) - (plusD * 24);
+//             hms.hr = 0;
+//         }
+//     }
 
-    hms.hr += c;
-    return hms.hr
-}
-function changeSeconds() {
-    let ss = 40                          // менять тут
-    changeSec(+ss);
+//     hms.hr += c;
+//     return hms.hr
+// }
+// function changeSeconds() {
+//     let ss = 40                          // менять тут
+//     changeSec(+ss);
 
-    showTime();
-}
+//     showTime();
+// }
 
-function changeMinutes() {
-    let mm =40                          // менять тут
+// function changeMinutes() {
+//     let mm =40                          // менять тут
 
-    changeMin(+mm);
+//     changeMin(+mm);
 
-    showTime();
-}
+//     showTime();
+// }
 
-function changeHours() {
-    let hh = 2                          // менять тут
+// function changeHours() {
+//     let hh = 2                          // менять тут
 
-    changeHr(+hh);
+//     changeHr(+hh);
 
-    showTime();
-}
+//     showTime();
+// }
 
-changeSeconds()
-changeMinutes()
-changeHours()
+// changeSeconds()
+// changeMinutes()
+// changeHours()
