@@ -1,0 +1,158 @@
+.main{
+    background-color: rgb(190, 157, 134);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.task2{
+    background-color: rgb(182, 161, 145);
+    margin: auto;
+    justify-content: center;
+    text-align: center; 
+}
+.coord{
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width:100%;
+}
+.click{
+    justify-content: flex-start;
+
+}
+
+.hideText{
+width: 300px;
+}
+.hideText p{
+text-align: left;
+}
+
+.task4{
+    display: flex;
+    width: 500px;
+}
+
+.bar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(71, 98, 151);
+    width: 100px;
+}
+
+.btnBar{
+    background-color: rgb(71, 98, 151);
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+.btnBar:hover{
+    background-color:rgb(53, 72, 109) ;
+}
+.hideTexts{
+    border: 5px solid rgb(71, 98, 151);;
+}
+
+.task5{
+    width: 100%;
+}
+
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.del{
+    height: 20px;
+    margin: auto 0;
+}
+
+.task6{
+    width: 220px;
+}
+.pBar{
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 10px;
+}
+.progress{
+    width: 0%;
+    height: 30px;
+    /* border-radius: 5px; */
+    background-color: rgb(71, 169, 171);
+
+}
+.t7{
+    width: 250px;
+    background-color: rgb(244, 230, 211);
+}
+.task7{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.task7 td{
+    text-align: left;
+    border: 1px solid black;
+    padding: 5px;
+
+}
+.task7 th{
+    border: 1px solid black;
+    padding: 5px;
+
+    
+}
+
+.task8{
+    width: 1200px;
+}
+
+.like{
+    padding: 5px;
+    background-color: rgb(108, 214, 214);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.disp{
+    display: flex;
+    background-color: rgb(90, 109, 176);
+    height: 40px;
+}
+li{
+    padding: 10px;
+    list-style: none;
+}
+li:hover{
+    background-color: rgb(67, 81, 129);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    
+}
+.drop{
+    background-color: rgb(90, 109, 176);
+    width: 100px;
+    position: absolute;
+    display :none; 
+
+}
+.drop ul{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
